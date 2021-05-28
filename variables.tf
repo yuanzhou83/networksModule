@@ -1,3 +1,11 @@
+/*
+    ---------------------------------------------------------------------------------------------
+    variables.tf
+    Description: All the variables in the child module
+    Original Authors: Yuan Zhou, yuan.zhou@hrsdc-rhdcc.gc.ca
+    ---------------------------------------------------------------------------------------------
+*/
+
 variable "rgname"{
     type = string
     description = "Name of Resource Group"
@@ -20,7 +28,7 @@ variable "networks" {
         address_space   = list(string)
         subnets         = map(object({
                 subnet_name      = string
-                subnet_prefix    = list(string)
+                subnet_prefixes  = list(string)
         }))
     }))    
 }

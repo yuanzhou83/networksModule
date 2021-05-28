@@ -1,14 +1,22 @@
-output "vnets" {
-    description = "Name of the list of virtual networks"
-    value = values(azurerm_virtual_network.vnet).*.name
+/*
+    ---------------------------------------------------------------------------------------------
+    outputs.tf
+    Description: The variables which will be displayed in the result
+    Original Authors: Yuan Zhou, yuan.zhou@hrsdc-rhdcc.gc.ca
+    ---------------------------------------------------------------------------------------------
+*/
+
+output "vnet_ids" {
+    description = "IDs of the list of virtual networks"    
+    value = values(azurerm_virtual_network.vnet).*.id
 }
 
-output "nsgs" {
-    description = "Name of the list of network security groups"
-    value = values(azurerm_network_security_group.nsg).*.name
+output "nsg_ids" {
+    description = "IDs of the list of network security groups"    
+    value = values(azurerm_network_security_group.nsg).*.id
 }
 
-output "route_tables" {
-    description = "Name of the list of route tables"
-    value = values(azurerm_route_table.rtable).*.name
+output "route_table_ids" {  
+    description = "IDs of the list of route tables"    
+    value = values(azurerm_route_table.rtable).*.id
 }
