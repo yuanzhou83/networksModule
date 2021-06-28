@@ -1,7 +1,7 @@
 /*
     ---------------------------------------------------------------------------------------------
     locals.tf
-    Description: Local variables are being created, separate them in to a 'locals.ft' file
+    Description: Local variables are being created, separate them in to a 'locals.tf' file
     Original Authors: Yuan Zhou, yuan.zhou@hrsdc-rhdcc.gc.ca
     ---------------------------------------------------------------------------------------------
 */

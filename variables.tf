@@ -16,11 +16,6 @@ variable "location"{
     description = "Azure location server environment"
 }
 
-variable "main_law_id" {
-  type          = string
-  description   = "ID of the workspace to send diagnostics to"
-}
-
 variable "networks" {
     description = "Map of Network/Vnet objects with their subnets."
     type = map(object({
@@ -31,4 +26,23 @@ variable "networks" {
                 subnet_prefixes  = list(string)
         }))
     }))    
+}
+
+variable "network_watcher_name" {
+  type          = string
+  description   = "Name of the network watcher."
+}
+
+variable "network_watcher_rg_name" {
+  type          = string
+  description   = "Resource group name of the network watcher."
+}
+
+variable "main_law" {
+  description = "Main law object with it's id, location, workspace id."
+  type = object({
+    workspace_id = string
+    location = string
+    id = string
+  })
 }
